@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven "maven-consty"
+    maven "maven-stephanie"
   }
   stages {
     stage ('Maven Clean'){
