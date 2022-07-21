@@ -14,5 +14,22 @@ pipeline {
         sh 'mvn package'
       }
     }
-  }
-}
+    stage ('docker build and push){
+           steps{
+             
+             withDockerRegistry([credentialsId: "dockercredential", url: 'https://index.docker.io/v1/"]){
+                                 sh'docker build -t constanceavouzoa1/java-maven-jenkins . -f Dockerfile
+                                 sh'docker push constanceavouzoa1/java-maven-jenkins'
+                                 }
+                                 }
+                                 }
+                                 
+
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 }
+                                 }
