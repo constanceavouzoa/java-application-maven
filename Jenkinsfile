@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven "maven-stephanie"
+    maven "maven_jenkins"
   }
   stages {
     stage ('Maven Clean'){
@@ -14,15 +14,11 @@ pipeline {
         sh 'mvn package'
       }
     }
-    stage ('docker build and push){
-           steps{
-             
-             withDockerRegistry([credentialsId: "dockercredential", url: 'https://index.docker.io/v1/"]){
-                                 sh'docker build -t constanceavouzoa1/java-maven-jenkins . -f Dockerfile
-                                 sh'docker push constanceavouzoa1/java-maven-jenkins'
-                                 }
-                                 }
-                                 }
+ 
+ 
+                                 
+                                 
+                                 
                                  
 
                                  
@@ -31,5 +27,5 @@ pipeline {
                                  
                                  
                                  
-                                 }
-                                 }
+                                 
+                                 
