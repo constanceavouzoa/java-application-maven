@@ -20,8 +20,21 @@ pipeline {
             withDockerRegistry([ credentialsId: "Docker_creds", url: "https://index.docker.io/v1/" ]){
                sh 'docker build -t constanceavouzoa1/java-maven . -f Dockerfile'
                sh 'docker push constanceavouzoa1/java-maven'
-             }
-}
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            }
+      }
+             
+
     
  
   
