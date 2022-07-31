@@ -23,7 +23,7 @@ pipeline {
         }
       }
     }
-    stage('Quality gate'){
+    stage ('Quality gate') {
       steps{
         script{
           timeout(time: 1, unit: 'hours') {
@@ -35,8 +35,7 @@ pipeline {
         }
       }
     }
-    
-   stage ('Docker build and push'){
+    stage ('Docker build and push'){
      steps{
        withDockerRegistry([ credentialsId: "docker_creds", url: "https://index.docker.io/v1/" ]){
      sh 'docker build -t constanceavouzoa1/java-maven . -f Dockerfile'
